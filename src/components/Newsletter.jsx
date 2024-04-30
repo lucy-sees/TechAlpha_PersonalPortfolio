@@ -2,6 +2,14 @@ import { useState, useEffect } from "react";
 import { Col, Row, Alert } from "react-bootstrap";
 
 export const Newsletter = ({ status, message, onValidated }) => {
+  let errorMsg = "";
+    if (message) {
+        if (typeof message === "object" && message !== null && message.message) {
+            errorMsg = message.message;
+        } else {
+            errorMsg = message;
+        }
+    }
   const [email, setEmail] = useState('');
 
   useEffect(() => {
@@ -28,7 +36,7 @@ export const Newsletter = ({ status, message, onValidated }) => {
             <Col lg={12} md={6} xl={5}>
               <h3>Subscribe to my Newsletter<br></br> & Never miss latest updates</h3>
               {status === 'sending' && <Alert>Sending...</Alert>}
-              {status === 'error' && <Alert variant="danger">{message}</Alert>}
+              {status === 'error' && <Alert variant="danger">{errorMsg}</Alert>}
               {status === 'success' && <Alert variant="success">{message}</Alert>}
             </Col>
             <Col md={6} xl={7}>
