@@ -17,13 +17,13 @@ export const Footer = () => {
           </Col>
           <Col size={12} sm={6} className="text-center text-sm-end">
             <div className="social-icon">
-              <a href="#"><img src={navIcon1} alt="linkedin" /></a>
-              <a href="#"><img src={navIcon2} alt="github" /></a>
-              <a href="#"><img src={navIcon3} alt="instagram" /></a>
-              <a href="#"><img src={navIcon4} alt="twitter" /></a>
+              <a href="https://www.linkedin.com/in/lucy-wanjiru-mwangi"><img src={navIcon1} alt="linkedin" /></a>
+              <a href="https://www.github.com/lucy-sees/"><img src={navIcon2} alt="github" /></a>
+              <a href="https://www.instagram.com/___the_lone_wolf__/"><img src={navIcon3} alt="instagram" /></a>
+              <a href="https://twitter.com/lucy_w_mwangi"><img src={navIcon4} alt="twitter" /></a>
             </div>
             <p>Copyright 2024. All Rights Reserved</p>
-            <p>Made with love by Lucy</p>
+            <p>Made with love by Lucy ♥</p>
           </Col>
         </Row>
       </Container>

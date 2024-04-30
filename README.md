@@ -1,25 +1,90 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 📗 Table of Contents
 
-## Available Scripts
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+  - [🎥 Presentation](#video-link)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
 
-In the project directory, you can run:
+# 📖 Personal Portfolio <a name="about-project"></a>
 
-### `npm start`
+A simple ReactJS portfolio for showcasing skills and projects of a Software Developer.
 
-Runs the app in the development mode.\
+## 🛠 Built With <a name="built-with"></a>
+
+### Tech Stack <a name="tech-stack"></a>
+
+<ul>
+    <li><a href="https://create-react-app.dev/">ReactJs</a></li>
+</ul>
+
+### Key Features <a name="key-features"></a>
+
+- **Banner**
+- **Skills**
+- **Projects**
+- **Modal pop-up window**
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+[Live Demo Link](https://tech-alpha-personal-portfolio.vercel.app/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📺 Presentation <a name="video-link"></a>
+
+[See the project presentation here]()
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+To get a local copy up and running, follow these steps:
+
+
+### Prerequisites
+
+To run this project you need:
+
+- [ReactJS](https://create-react-app.dev/) installed and running. To get more information, read the [installation guide](https://create-react-app.dev/docs/getting-started/).
+
+### Setup
+
+Clone this repository to your desired folder:
+
+```
+git clone git@github.com:lucy-sees/TechAlpha_PersonalPortfolio.git
+```
+
+ ### Install
+
+Install this project with:
+
+```npm install``` to install libraries needed by the app.
+
+```npm start``` Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+### Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
+To run the project, execute the following command:
+```npm run build```
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -27,44 +92,46 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### `npm run eject`
+## 👥 Author <a name="authors"></a>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+👤 **Lucy W. Mwangi**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- GitHub: [@lucy-sees](https://github.com/lucy-sees)
+- Twitter: [@lucy_w_mwangi](https://twitter.com/lucy_w_mwangi)
+- LinkedIn: [@Lucy (Wanjiru) Mwangi](https://www.linkedin.com/in/lucy-wanjiru-mwangi)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🔭 Future Features <a name="future-features"></a>
 
-## Learn More
+- [ ] **Improved UI**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🤝 Contributing <a name="contributing"></a>
 
-### Code Splitting
+Contributions, issues, and feature requests are welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Feel free to check the [issues page](https://github.com/lucy-sees/TechAlpha_PersonalPortfolio/issues).
 
-### Analyzing the Bundle Size
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## ⭐️ Show your support <a name="support"></a>
 
-### Making a Progressive Web App
+If you like this project, please consider giving it a star.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Advanced Configuration
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- I would like to thank all code reviewers for making this project better.
 
-### Deployment
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📝 License <a name="license"></a>
 
-### `npm run build` fails to minify
+This project is [MIT](https://github.com/lucy-sees/TechAlpha_PersonalPortfolio/blob/c39aa786d8a9f1d0e5bdff1d1b456687838cad42/LICENSE) licensed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
