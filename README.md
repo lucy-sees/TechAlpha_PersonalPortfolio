@@ -46,7 +46,7 @@ A simple ReactJS portfolio for showcasing skills and projects of a Software Deve
 
 ## 📺 Presentation <a name="video-link"></a>
 
-[See the project presentation here]()
+[See the project presentation here](https://drive.google.com/file/d/15YhvoSMvqSV_r91hyFj9rxGcxfp8DwQg/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
