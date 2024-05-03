@@ -66,7 +66,7 @@ export const Projects = () => {
             description: "A personal portfolio that showcases a web developer's skills and work.",
             technologies: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'Vercel'],
             imgUrl: projImg5,
-            liveUrl: 'https://webforlio.vercel.app/',
+            liveUrl: 'https://webforlio-lucysees-projects.vercel.app/',
             sourceUrl: 'https://github.com/lucy-sees/Webforlio'
         },
         {
