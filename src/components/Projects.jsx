@@ -76,7 +76,7 @@ export const Projects = () => {
             description: "A bank website that showcases the work and services offered by a professional bank.",
             technologies: ['ReactJS', 'NextJS', 'JavaScript', 'Tailwind', 'Vercel'],
             imgUrl: projImg6,
-            liveUrl: 'https://blue-bank-pied.vercel.app/',
+            liveUrl: 'https://blue-bank-bb.vercel.app/',
             sourceUrl: 'https://github.com/lucy-sees/BlueBank'
         }
     ];
