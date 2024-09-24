@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.png";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
@@ -10,7 +10,7 @@ export const Banner = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(200 - Math.random() * 100);
-  
+
   useEffect(() => {
     const toRotate = [ "Web Developer", "Web Designer", "UI/UX Designer" ];
     const period = 1500;
@@ -41,20 +41,76 @@ export const Banner = () => {
     }, delta);
 
     return () => { clearInterval(ticker) };
-  }, [text, delta, loopNum, isDeleting]); // Ensure all dependencies are listed
-  
+  }, [text, delta, loopNum, isDeleting]);
+
   return (
-    <section className="banner" id="home">
+    <section className="banner" id="home" style={{ backgroundColor: '#fef08a', minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
       <Container>
-        <Row className="aligh-items-center">
+        <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Lucy a`} <span className="txt-rotate" dataPeriod="800" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
-                <p>I’m a software developer! I can help you build a product, feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hesitate to contact me.</p>
-                <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                <span className="tagline" style={{ 
+                  display: 'inline-block', 
+                  backgroundColor: 'black', 
+                  color: 'white', 
+                  padding: '10px 20px', 
+                  fontSize: '1.25rem', 
+                  fontWeight: 'bold', 
+                  marginBottom: '1rem',
+                  transform: 'rotate(-2deg)'
+                }}>
+                  Welcome to my Portfolio
+                </span>
+                <h1 style={{ fontSize: '3.5rem', fontWeight: '900', marginBottom: '1.5rem', lineHeight: '1.2' }}>
+                  Hi! I'm Lucy a{' '}
+                  <span className="txt-rotate">
+                    <span className="wrap" style={{ 
+                      display: 'inline-block', 
+                      backgroundColor: '#ef4444', 
+                      color: 'white', 
+                      padding: '5px 10px',
+                      transform: 'rotate(1deg)'
+                    }}>
+                      {text}
+                    </span>
+                  </span>
+                </h1>
+                <p style={{ 
+                  fontSize: '1.25rem', 
+                  marginBottom: '2rem', 
+                  backgroundColor: 'white', 
+                  padding: '1rem', 
+                  border: '4px solid black',
+                  boxShadow: '8px 8px 0 0 #000'
+                }}>
+                  I'm a software developer! I can help you build a product, feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, don't hesitate to contact me.
+                </p>
+                <Button 
+                  onClick={() => console.log('connect')}
+                  style={{
+                    backgroundColor: '#3b82f6',
+                    color: 'white',
+                    fontSize: '1.25rem',
+                    fontWeight: 'bold',
+                    padding: '10px 20px',
+                    border: '4px solid black',
+                    borderRadius: '0',
+                    boxShadow: '8px 8px 0 0 #000',
+                    transition: 'all 0.3s ease'
+                  }}
+                  onMouseOver={(e) => {
+                    e.target.style.boxShadow = 'none';
+                    e.target.style.transform = 'translate(4px, 4px)';
+                  }}
+                  onMouseOut={(e) => {
+                    e.target.style.boxShadow = '8px 8px 0 0 #000';
+                    e.target.style.transform = 'none';
+                  }}
+                >
+                  Let's Connect <ArrowRightCircle size={25} />
+                </Button>
               </div>}
             </TrackVisibility>
           </Col>
@@ -62,7 +118,12 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img"/>
+                  <img src={headerImg} alt="Header Img" style={{
+                    width: '100%',
+                    border: '8px solid black',
+                    boxShadow: '16px 16px 0 0 #000',
+                    transform: 'rotate(3deg)'
+                  }}/>
                 </div>}
             </TrackVisibility>
           </Col>
