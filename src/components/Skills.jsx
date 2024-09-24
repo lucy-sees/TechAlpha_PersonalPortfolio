@@ -1,10 +1,11 @@
+import React from 'react';
 import Carousel from 'react-multi-carousel';
+import { Container, Row, Col } from 'react-bootstrap';
 import 'react-multi-carousel/lib/styles.css';
 
 export const Skills = () => {
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5
     },
@@ -23,43 +24,50 @@ export const Skills = () => {
   };
 
   return (
-    <section className="skill" id="skills">
-        <div className="container">
-            <div className="row">
-                <div className="col-12">
-                    <div className="skill-bx wow zoomIn">
-                        <h2>Skills</h2>
-                      <p>As a Developer I have equipped myself with some valuable skills.<br></br> Here they are and their varying strengths.</p>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                            <div className="item">
-                                <div class="progress-bar web-dev">
-                                  <div class="progress-text">95%</div>
-                                </div>
-                                <h5>Web Development</h5>
-                            </div>
-                            <div className="item">
-                                <div class="progress-bar brand-d">
-                                  <div class="progress-text">80%</div>
-                                </div>
-                                <h5>Brand Design</h5>
-                            </div>
-                            <div className="item">
-                                <div class="progress-bar logo-des">
-                                  <div class="progress-text">90%</div>
-                                </div>
-                                <h5>Logo Design</h5>
-                            </div>
-                            <div className="item">
-                                <div class="progress-bar ui-ux">
-                                  <div class="progress-text">95%</div>
-                                </div>
-                                <h5>UI/UX</h5>
-                            </div>
-                        </Carousel>
-                    </div>
+    <section className="neubrutalist-skills" id="skills">
+      <Container>
+        <Row>
+          <Col className="text-center">
+            <div className="neubrutalist-skills-box">
+              <h2 className="neubrutalist-heading">Skills</h2>
+              <p className="neubrutalist-description">
+                As a Developer I have equipped myself with some valuable skills.<br />
+                Here they are and their varying strengths.
+              </p>
+              <Carousel
+                responsive={responsive}
+                infinite={true}
+                className="neubrutalist-carousel"
+              >
+                <div className="neubrutalist-item">
+                  <div className="neubrutalist-progress-bar web-dev">
+                    <div className="neubrutalist-progress-text">95%</div>
+                  </div>
+                  <h5 className="neubrutalist-skill-title">Web Development</h5>
                 </div>
+                <div className="neubrutalist-item">
+                  <div className="neubrutalist-progress-bar brand-d">
+                    <div className="neubrutalist-progress-text">80%</div>
+                  </div>
+                  <h5 className="neubrutalist-skill-title">Brand Design</h5>
+                </div>
+                <div className="neubrutalist-item">
+                  <div className="neubrutalist-progress-bar logo-des">
+                    <div className="neubrutalist-progress-text">90%</div>
+                  </div>
+                  <h5 className="neubrutalist-skill-title">Logo Design</h5>
+                </div>
+                <div className="neubrutalist-item">
+                  <div className="neubrutalist-progress-bar ui-ux">
+                    <div className="neubrutalist-progress-text">95%</div>
+                  </div>
+                  <h5 className="neubrutalist-skill-title">UI/UX</h5>
+                </div>
+              </Carousel>
             </div>
-        </div>
+          </Col>
+        </Row>
+      </Container>
     </section>
-  )
-}
+  );
+};
