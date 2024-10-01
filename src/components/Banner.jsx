@@ -120,8 +120,8 @@ export const Banner = () => {
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
                   <img src={headerImg} alt="Header Img" style={{
                     width: '100%',
-                    border: '8px solid black',
-                    boxShadow: '16px 16px 0 0 #000',
+                    // border: '8px solid black',
+                    // boxShadow: '16px 16px 0 0 #000',
                     transform: 'rotate(3deg)'
                   }}/>
                 </div>}
