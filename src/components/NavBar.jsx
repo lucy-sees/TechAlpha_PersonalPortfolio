@@ -4,7 +4,7 @@ import logo from "../assets/img/logo.png";
 import { HashLink } from "react-router-hash-link";
 import { BrowserRouter as Router } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub, faMedium, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -82,8 +82,8 @@ export const NavBar = () => {
                 <a href="https://github.com/lucy-sees" className="neubrutalist-social-icon">
                   <FontAwesomeIcon icon={faGithub} size="2x" color="#181717" />
                 </a>
-                <a href="https://www.instagram.com/___the_lone_wolf__/" className="neubrutalist-social-icon">
-                  <FontAwesomeIcon icon={faInstagram} size="2x" color="#E4405F" />
+                <a href="https://medium.com/@lucywanjirumwangi/" className="neubrutalist-social-icon">
+                  <FontAwesomeIcon icon={faMedium} size="2x" color="#E4405F" />
                 </a>
                 <a href="https://twitter.com/lucy_w_mwangi" className="neubrutalist-social-icon">
                   <FontAwesomeIcon icon={faXTwitter} size="2x" color="#00000" />
