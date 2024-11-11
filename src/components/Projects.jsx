@@ -46,7 +46,7 @@ export const Projects = () => {
             description: "A collection of awesome UI templates.",
             technologies: ['React.js', 'Node.js', 'Express.js', 'CSS', 'Vercel'],
             imgUrl: projImg3,
-            liveUrl: 'https://hurudevs.tech',
+            liveUrl: 'https://huru-devs.tech',
             sourceUrl: 'https://github.com/lucy-sees/HuruDevsTech'
         },
         {
