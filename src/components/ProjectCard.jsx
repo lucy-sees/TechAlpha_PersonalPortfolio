@@ -43,7 +43,7 @@ export const ProjectCard = ({ title, specialization, year, description, technolo
       {/* Modal */}
       <Modal show={showModal} onHide={handleClose} centered className="projectsModal" size="lg">
         <Container className="projectsModalBody">
-          <Modal.Header closeButton>
+          <Modal.Header closeButton className="modal-header">
             <Modal.Title>{title}</Modal.Title>
           </Modal.Header>
           <Modal.Body >
@@ -60,8 +60,9 @@ export const ProjectCard = ({ title, specialization, year, description, technolo
                 <p>{description}</p>
                 <p><strong>Specialization:</strong> {specialization}</p>
                 <p><strong>Year:</strong> {year}</p>
+                <p style={{ color: "#f7df1e", display: "inline-block", padding: "5px 10px"
+                 }}><strong>Technologies:</strong></p>
                 <ul>
-                  <p style={{ color: "purple" }}><strong>Technologies:</strong></p>
                   {technologies.map((tech, index) => (
                     <li key={index}>{tech}</li>
                   ))}
@@ -69,20 +70,20 @@ export const ProjectCard = ({ title, specialization, year, description, technolo
               </>
             )}
           </Modal.Body>
-          <Modal.Footer>
+          <Modal.Footer className="modal-footer">
             {!isLiveView && (
-              <button onClick={handleLiveClick} className="p-2 button-modal see-live">
+              <button onClick={handleLiveClick} className="button-modal see-live">
                 See Live 
                 <LuArrowUpRightFromCircle className="mx-2" />
               </button>
             )}
-            <button onClick={handleSourceClick} className="p-2 button-modal get-source">
+            <button onClick={handleSourceClick} className="button-modal get-source">
               Get Source 
               <FaGithub className="mx-2"/>
             </button>
 
             {isLiveView && (
-              <button onClick={handleBack} className="p-2 button-modal see-live">
+              <button onClick={handleBack} className="button-modal see-live">
                 Go Back
                 <TiArrowBackOutline className="mx-2"/>
               </button>
