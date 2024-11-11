@@ -107,7 +107,7 @@ export const Projects = () => {
             year: 2024,
             description: "A collection of awesome UI templates.",
             imgUrl: logoImg3,
-            liveUrl: 'https://hurudevs.tech',
+            liveUrl: 'https://huru-devs.tech',
             sourceUrl: 'https://github.com/lucy-sees/HuruDevsTech'
         },
         {

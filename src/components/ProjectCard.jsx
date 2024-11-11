@@ -1,62 +1,96 @@
 import React, { useState } from "react";
-import { Col, Modal } from "react-bootstrap";
+import { Col, Container, Modal } from "react-bootstrap";
+import { LuArrowUpRightFromCircle } from "react-icons/lu";
+import { FaGithub } from "react-icons/fa";
+import { TiArrowBackOutline } from "react-icons/ti";
 
 export const ProjectCard = ({ title, specialization, year, description, technologies, imgUrl, liveUrl, sourceUrl }) => {
   // State to control the modal visibility
   const [showModal, setShowModal] = useState(false);
+  const [isLiveView, setIsLiveView] = useState(false);
 
   // Event handler to open the modal
-  const handleShow = () => setShowModal(true);
+  const handleShow = () => {
+    setShowModal(true);
+    setIsLiveView(false);
+  };
 
   // Event handler to close the modal
   const handleClose = () => setShowModal(false);
 
-  //handler for url
-  const handleLiveClick = () => window.open(liveUrl, '_blank');
+  // Event handler for "See Live" button click
+  const handleLiveClick = () => setIsLiveView(true);
+
+  // Event handler for "Back" button click
+  const handleBack = () => setIsLiveView(false);
+
+  // Event handler for "Get Source" button click
   const handleSourceClick = () => window.open(sourceUrl, '_blank');
 
-
-    return (
-      <>
-        {/* Project Card */}
-        <Col size={12} sm={6} md={4}>
-          <div className="proj-imgbx" onClick={handleShow}>
-            <img src={imgUrl} alt={title} className="img-fluid" />
-            <div className="proj-txtx">
-              <h4>{title}</h4>
-              <p>{description}</p>
-            </div>
+  return (
+    <>
+      {/* Project Card */}
+      <Col size={12} sm={6} md={4}>
+        <div className="proj-imgbx" onClick={handleShow}>
+          <img src={imgUrl} alt={title} className="img-fluid" />
+          <div className="proj-txtx">
+            <h4>{title}</h4>
+            <p>{description}</p>
           </div>
-        </Col>
+        </div>
+      </Col>
 
-        {/* Modal */}
-        <Modal show={showModal} onHide={handleClose} centered className="modal">
+      {/* Modal */}
+      <Modal show={showModal} onHide={handleClose} centered className="projectsModal" size="lg">
+        <Container className="projectsModalBody">
           <Modal.Header closeButton>
             <Modal.Title>{title}</Modal.Title>
           </Modal.Header>
-          <Modal.Body>
-            <img src={imgUrl} alt={title} className="img-fluid mb-3" />
-            <p>{description}</p>
-            <p><strong>Specialization:</strong> {specialization}</p>
-            <p><strong>Year:</strong> {year}</p>
-            <ul>
-              <p style={{ color: "purple" }}><strong>Technologies:</strong></p>
-              {technologies.map((tech, index) => (
-                <li key={index}>{tech}</li>
-              ))}
-            </ul>
+          <Modal.Body >
+            {isLiveView ? (
+              <iframe
+                src={liveUrl}
+                title={title}
+                style={{ width: '100%', height: '500px', border: 'none' }}
+                allowFullScreen
+              ></iframe>
+            ) : (
+              <>
+                <img src={imgUrl} alt={title} className="img-fluid mb-3" />
+                <p>{description}</p>
+                <p><strong>Specialization:</strong> {specialization}</p>
+                <p><strong>Year:</strong> {year}</p>
+                <ul>
+                  <p style={{ color: "purple" }}><strong>Technologies:</strong></p>
+                  {technologies.map((tech, index) => (
+                    <li key={index}>{tech}</li>
+                  ))}
+                </ul>
+              </>
+            )}
           </Modal.Body>
           <Modal.Footer>
-            <button onClick={handleLiveClick} style={{ '--c': 'purple' }} className="btn-modal">
-              See Live <i className="fa fa-arrow-circle-right" aria-hidden="true"></i>
+            {!isLiveView && (
+              <button onClick={handleLiveClick} className="p-2 button-modal see-live">
+                See Live 
+                <LuArrowUpRightFromCircle className="mx-2" />
+              </button>
+            )}
+            <button onClick={handleSourceClick} className="p-2 button-modal get-source">
+              Get Source 
+              <FaGithub className="mx-2"/>
             </button>
-            <button onClick={handleSourceClick} style={{ '--c': 'hotpink' }} className="btn-modal">
-              Get Source <i className="fa fa-github" aria-hidden="true"></i>
-            </button>
+
+            {isLiveView && (
+              <button onClick={handleBack} className="p-2 button-modal see-live">
+                Go Back
+                <TiArrowBackOutline className="mx-2"/>
+              </button>
+            )}
           </Modal.Footer>
+        </Container>
 
-        </Modal>
-
-      </>
-    );
-  };
+      </Modal>
+    </>
+  );
+};
