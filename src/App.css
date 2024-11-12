@@ -479,8 +479,7 @@ nav.navbar {
   background-color: rgb(247, 223, 30, 0.1);
   border-radius: 0;
   text-align: center;
-  padding: 60px 50px;
-  margin-top: -60px;
+  
   box-shadow: 8px 8px 0 #000;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -488,12 +487,14 @@ nav.navbar {
   z-index: 10000;
   width: max-content;
 }
+.modal-header {
+  margin-top: 10%;
+}
 .projectsModalBody {
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
   border-radius: 10px;
   text-align: center;
-  padding: 60px 50px;
-  margin-top: -60px;
+  padding: 0;
   box-shadow: 8px 8px 0 #000;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -502,35 +503,32 @@ nav.navbar {
 .projectsModal ul {
   white-space: normal;
   list-style-type: none;
-  display: flex;
+  display: flex-start;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
   padding: 0;
 }
 .projectsModal ul li {
   text-align: center;
   margin-right: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   border-radius: 0.8rem;
   font-family: monospace;
   font-weight: 600;
   color: pink;
   background-color: #000;
-  min-width: 100px;
-  max-width: 100%;
-  padding: 3px;
+  padding: 3px 10px;
+  display: inline-block; /* Allow width to adjust based on content */
   box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
 }
 .projectsModal ul p {
   margin-right: 5%;
   box-shadow: none;
 }
-/* Custom button styles */
 .button-modal .see-live:hover, .get-source:hover {
   background: purple;
   color: #fcfcfc;
 }
-
 .button-modal.see-live{
   font-weight: 700;
   color: #000;
@@ -543,7 +541,6 @@ nav.navbar {
   transition: all 0.3s ease;
   box-shadow: 4px 4px 0 #000;
 }
-
 .button-modal.get-source {
   font-weight: 700;
   color: #000;
@@ -556,7 +553,6 @@ nav.navbar {
   transition: all 0.3s ease;
   box-shadow: 4px 4px 0 #000;
 }
-
 .button-modal:hover {
   --_p: 100%;
   transition: background-position .4s, background-size 0s;
@@ -566,13 +562,21 @@ nav.navbar {
   background-color: var(--c);
   color: #fcd3d3;
 }
-
 .button-modal {
   font-family: system-ui, sans-serif;
   cursor: pointer;
   padding: .1em .6em;
   font-weight: bold;  
   border: none;
+}
+/* loading spinner */
+.spinner{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  animation: spin 1s linear infinite;
 }
 /** Contact **/
 .contact {
@@ -746,4 +750,12 @@ nav.navbar {
   color: #B8B8B8;
   letter-spacing: 0.5px;
   margin-top: 20px;
+}
+
+
+@media (max-width: 768px) {
+  .button-modal.see-live, .button-modal.get-source {
+    padding: 5px 14px;
+    font-size: 12px;
+  }
 }

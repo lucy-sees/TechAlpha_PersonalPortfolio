@@ -3,11 +3,18 @@ import { Col, Container, Modal } from "react-bootstrap";
 import { LuArrowUpRightFromCircle } from "react-icons/lu";
 import { FaGithub } from "react-icons/fa";
 import { TiArrowBackOutline } from "react-icons/ti";
+import Spinner from "./Spinner";
 
 export const ProjectCard = ({ title, specialization, year, description, technologies, imgUrl, liveUrl, sourceUrl }) => {
   // State to control the modal visibility
   const [showModal, setShowModal] = useState(false);
   const [isLiveView, setIsLiveView] = useState(false);
+  // loader
+  const [loading, setLoading] = useState(true);
+
+  const handleIframeLoad = () => {
+    setLoading(false);
+  };
 
   // Event handler to open the modal
   const handleShow = () => {
@@ -48,12 +55,15 @@ export const ProjectCard = ({ title, specialization, year, description, technolo
           </Modal.Header>
           <Modal.Body >
             {isLiveView ? (
+              <>
+              {loading && <Spinner animation="border" />}
               <iframe
                 src={liveUrl}
                 title={title}
                 style={{ width: '100%', height: '500px', border: 'none' }}
-                allowFullScreen
+                onLoad={handleIframeLoad}
               ></iframe>
+            </>
             ) : (
               <>
                 <img src={imgUrl} alt={title} className="img-fluid mb-3" />
