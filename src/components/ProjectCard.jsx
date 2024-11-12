@@ -37,7 +37,7 @@ export const ProjectCard = ({ title, specialization, year, description, technolo
   return (
     <>
       {/* Project Card */}
-      <Col size={12} sm={6} md={4}>
+      <Col size={12} sm={6} md={4} className="custom-project-card">
         <div className="proj-imgbx" onClick={handleShow}>
           <img src={imgUrl} alt={title} className="img-fluid" />
           <div className="proj-txtx">
@@ -48,30 +48,31 @@ export const ProjectCard = ({ title, specialization, year, description, technolo
       </Col>
 
       {/* Modal */}
-      <Modal show={showModal} onHide={handleClose} centered className="projectsModal" size="lg">
+      <Modal show={showModal} onHide={handleClose} centered className="projectsModal custom-modal-width" size="lg">
         <Container className="projectsModalBody">
           <Modal.Header closeButton className="modal-header">
             <Modal.Title>{title}</Modal.Title>
           </Modal.Header>
-          <Modal.Body >
+          <Modal.Body>
             {isLiveView ? (
               <>
-              {loading && <Spinner animation="border" />}
-              <iframe
-                src={liveUrl}
-                title={title}
-                style={{ width: '100%', height: '500px', border: 'none' }}
-                onLoad={handleIframeLoad}
-              ></iframe>
-            </>
+                {loading && <Spinner animation="border" />}
+                <iframe
+                  src={liveUrl}
+                  title={title}
+                  style={{ width: '100%', height: '500px', border: 'none' }}
+                  onLoad={handleIframeLoad}
+                ></iframe>
+              </>
             ) : (
               <>
                 <img src={imgUrl} alt={title} className="img-fluid mb-3" />
                 <p>{description}</p>
                 <p><strong>Specialization:</strong> {specialization}</p>
                 <p><strong>Year:</strong> {year}</p>
-                <p style={{ color: "#f7df1e", display: "inline-block", padding: "5px 10px"
-                 }}><strong>Technologies:</strong></p>
+                <p style={{
+                  color: "#f7df1e", display: "inline-block", padding: "5px 10px"
+                }}><strong>Technologies:</strong></p>
                 <ul>
                   {technologies.map((tech, index) => (
                     <li key={index}>{tech}</li>
@@ -83,24 +84,23 @@ export const ProjectCard = ({ title, specialization, year, description, technolo
           <Modal.Footer className="modal-footer">
             {!isLiveView && (
               <button onClick={handleLiveClick} className="button-modal see-live">
-                See Live 
+                See Live
                 <LuArrowUpRightFromCircle className="mx-2" />
               </button>
             )}
             <button onClick={handleSourceClick} className="button-modal get-source">
-              Get Source 
-              <FaGithub className="mx-2"/>
+              Get Source
+              <FaGithub className="mx-2" />
             </button>
 
             {isLiveView && (
               <button onClick={handleBack} className="button-modal see-live">
                 Go Back
-                <TiArrowBackOutline className="mx-2"/>
+                <TiArrowBackOutline className="mx-2" />
               </button>
             )}
           </Modal.Footer>
         </Container>
-
       </Modal>
     </>
   );

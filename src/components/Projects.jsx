@@ -33,7 +33,7 @@ export const Projects = () => {
             title: "Ninja Reader",
             specialization: "Front End Dev",
             year: 2024,
-            description: "A dynamic online platform offering a vast selection of books across various genres.",
+            description: "An online book library.",
             technologies: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'Vercel'],
             imgUrl: projImg2,
             liveUrl: 'https://ninja-reader.vercel.app/',
