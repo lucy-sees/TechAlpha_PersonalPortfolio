@@ -1,56 +1,60 @@
 import React, { useState } from "react";
-import { Col, Container, Modal } from "react-bootstrap";
+import { Col, Modal, Container, Spinner } from "react-bootstrap";
 import { LuArrowUpRightFromCircle } from "react-icons/lu";
 import { FaGithub } from "react-icons/fa";
-import { TiArrowBackOutline } from "react-icons/ti";
-import Spinner from "./Spinner";
 
 export const ProjectCard = ({ title, specialization, year, description, technologies, imgUrl, liveUrl, sourceUrl }) => {
   // State to control the modal visibility
   const [showModal, setShowModal] = useState(false);
   const [isLiveView, setIsLiveView] = useState(false);
-  // loader
   const [loading, setLoading] = useState(true);
 
-  const handleIframeLoad = () => {
-    setLoading(false);
-  };
-
-  // Event handler to open the modal
+  // Event handler to open the modal with the URL loaded
   const handleShow = () => {
     setShowModal(true);
-    setIsLiveView(false);
+    setIsLiveView(true);
+    setLoading(true);
   };
 
   // Event handler to close the modal
-  const handleClose = () => setShowModal(false);
+  const handleClose = () => {
+    setShowModal(false);
+    setIsLiveView(false);
+  };
 
   // Event handler for "See Live" button click
-  const handleLiveClick = () => setIsLiveView(true);
-
-  // Event handler for "Back" button click
-  const handleBack = () => setIsLiveView(false);
+  const handleLiveClick = () => {
+    setIsLiveView(true);
+    setLoading(true);
+  };
 
   // Event handler for "Get Source" button click
   const handleSourceClick = () => window.open(sourceUrl, '_blank');
 
+  // Event handler for iframe load
+  const handleIframeLoad = () => setLoading(false);
+
   return (
     <>
       {/* Project Card */}
-      <Col size={12} sm={6} md={4} className="custom-project-card">
-        <div className="proj-imgbx" onClick={handleShow}>
+      <Col size={12} sm={6} md={4}>
+        <div className="proj-imgbx">
           <img src={imgUrl} alt={title} className="img-fluid" />
           <div className="proj-txtx">
             <h4>{title}</h4>
             <p>{description}</p>
+            <button onClick={handleShow} className="p-2 button-modal see-live">
+              See Project
+              <LuArrowUpRightFromCircle className="mx-2" />
+            </button>
           </div>
         </div>
       </Col>
 
       {/* Modal */}
-      <Modal show={showModal} onHide={handleClose} centered className="projectsModal custom-modal-width" size="lg">
+      <Modal show={showModal} onHide={handleClose} centered className="projectsModal custom-modal-width" size="xl">
         <Container className="projectsModalBody">
-          <Modal.Header closeButton className="modal-header">
+          <Modal.Header closeButton>
             <Modal.Title>{title}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
@@ -60,7 +64,7 @@ export const ProjectCard = ({ title, specialization, year, description, technolo
                 <iframe
                   src={liveUrl}
                   title={title}
-                  style={{ width: '100%', height: '500px', border: 'none' }}
+                  style={{ width: '100%', height: '80vh', border: 'none' }}
                   onLoad={handleIframeLoad}
                 ></iframe>
               </>
@@ -81,24 +85,17 @@ export const ProjectCard = ({ title, specialization, year, description, technolo
               </>
             )}
           </Modal.Body>
-          <Modal.Footer className="modal-footer">
+          <Modal.Footer>
             {!isLiveView && (
-              <button onClick={handleLiveClick} className="button-modal see-live">
-                See Live
+              <button onClick={handleLiveClick} className="p-2 button-modal see-live">
+                See Live 
                 <LuArrowUpRightFromCircle className="mx-2" />
               </button>
             )}
-            <button onClick={handleSourceClick} className="button-modal get-source">
-              Get Source
-              <FaGithub className="mx-2" />
+            <button onClick={handleSourceClick} className="p-2 button-modal get-source">
+              Get Source 
+              <FaGithub className="mx-2"/>
             </button>
-
-            {isLiveView && (
-              <button onClick={handleBack} className="button-modal see-live">
-                Go Back
-                <TiArrowBackOutline className="mx-2" />
-              </button>
-            )}
           </Modal.Footer>
         </Container>
       </Modal>
