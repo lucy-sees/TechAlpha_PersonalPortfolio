@@ -89,7 +89,7 @@ export const NavBar = () => {
                   <FontAwesomeIcon icon={faXTwitter} size="2x" color="#00000" />
                 </a>
               </div>
-              <HashLink to="#connect">
+              <HashLink to="contact">
                 <button className="neubrutalist-button">
                   <span>Let's Connect</span>
                 </button>
