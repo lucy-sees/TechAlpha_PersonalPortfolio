@@ -107,7 +107,7 @@ export const Projects = () => {
             year: 2024,
             description: "A Web Design Agency.",
             imgUrl: logoImg3,
-            liveUrl: 'https://huru-devs.tech',
+            liveUrl: 'https://agencywebsite-nine.vercel.app/',
             sourceUrl: 'https://github.com/lucy-sees/HuruDevsTech'
         },
         {
