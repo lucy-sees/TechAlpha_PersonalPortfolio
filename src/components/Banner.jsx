@@ -13,8 +13,8 @@ export const Banner = () => {
   const [delta, setDelta] = useState(200 - Math.random() * 100);
 
   useEffect(() => {
-    const toRotate = ["Software Developer", "AI Enthusiast", "Aspiring DevOps Engineer"];
-    const period = 1500;
+    const toRotate = ["Software Developer", "AI Enthusiast", "DevOps Engineer"];
+    const period = 2000;
 
     const tick = () => {
       let i = loopNum % toRotate.length;
