@@ -1,4 +1,9 @@
-<a name="readme-top"></a>
+
+# 🚀 Welcome to Lucy's Portfolio!
+
+**[Lucy's Portfolio](https://tech-alpha-personal-portfolio.vercel.app/)** is a showcase of my skills, projects, and creativity as a **Software Developer** and **UI/UX Designer**. Whether you're here to explore my work, collaborate on a project, or just get inspired, this portfolio is designed to highlight my journey and expertise in building modern, responsive, and user-friendly web applications.
+
+Powered by **React.js**, **Bootstrap**, and a touch of creativity, this portfolio reflects my passion for clean design, functional interfaces, and innovative solutions. Inspired by the simplicity of modern web development, I aim to make every interaction seamless and enjoyable. 🎉
 
 # 📗 Table of Contents
 
@@ -36,24 +41,22 @@ A simple ReactJS portfolio for showcasing skills and projects of a Software Deve
 - **Skills**
 - **Projects**
 - **Modal pop-up window**
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+- Contact Section
+- Newsletter
+>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 [Live Demo Link](https://tech-alpha-personal-portfolio.vercel.app/)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ## 📺 Presentation <a name="video-link"></a>
 
-[See the project presentation here]()
+[See the project presentation here](https://drive.google.com/file/d/1II0siIMuRiHJmhcC7YJxj7m19UNOlx4z/view?usp=sharing)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running, follow these steps:
-
 
 ### Prerequisites
 
@@ -64,12 +67,11 @@ To run this project you need:
 ### Setup
 
 Clone this repository to your desired folder:
+git clone git@github.com:lucy-sees /TechAlpha_PersonalPortfolio.git
 
-```
-git clone git@github.com:lucy-sees/TechAlpha_PersonalPortfolio.git
-```
+Copy
 
- ### Install
+### Install
 
 Install this project with:
 
@@ -92,7 +94,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## 👥 Author <a name="authors"></a>
 
@@ -102,13 +104,11 @@ Your app is ready to be deployed!
 - Twitter: [@lucy_w_mwangi](https://twitter.com/lucy_w_mwangi)
 - LinkedIn: [@Lucy (Wanjiru) Mwangi](https://www.linkedin.com/in/lucy-wanjiru-mwangi)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **Improved UI**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+- [ ] **Blog features**
 
 ## 🤝 Contributing <a name="contributing"></a>
 
@@ -116,19 +116,15 @@ Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/lucy-sees/TechAlpha_PersonalPortfolio/issues).
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ## ⭐️ Show your support <a name="support"></a>
 
 If you like this project, please consider giving it a star.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 - I would like to thank all code reviewers for making this project better.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📝 License <a name="license"></a>
 
