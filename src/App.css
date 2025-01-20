@@ -312,22 +312,22 @@ nav.navbar {
 
 .neubrutalist-progress-bar.python-dev {
   background: radial-gradient(closest-side, #f7df1e 79%, transparent 80% 100%),
-              conic-gradient(#AA367C 80%, pink 0);
+              conic-gradient(#AA367C 70%, pink 0);
 }
 
 .neubrutalist-progress-bar.docker-dev {
   background: radial-gradient(closest-side, #f7df1e 79%, transparent 80% 100%),
-              conic-gradient(#AA367C 75%, pink 0);
+              conic-gradient(#AA367C 50%, pink 0);
 }
 
 .neubrutalist-progress-bar.node-dev {
   background: radial-gradient(closest-side, #f7df1e 79%, transparent 80% 100%),
-              conic-gradient(#AA367C 85%, pink 0);
+              conic-gradient(#AA367C 80%, pink 0);
 }
 
 .neubrutalist-progress-bar.tailwind-dev {
   background: radial-gradient(closest-side, #f7df1e 79%, transparent 80% 100%),
-              conic-gradient(#AA367C 90%, pink 0);
+              conic-gradient(#AA367C 75%, pink 0);
 }
 
 .neubrutalist-progress-bar.bootstrap-dev {
@@ -342,27 +342,27 @@ nav.navbar {
 
 .neubrutalist-progress-bar.mongo-dev {
   background: radial-gradient(closest-side, #f7df1e 79%, transparent 80% 100%),
-              conic-gradient(#AA367C 85%, pink 0);
+              conic-gradient(#AA367C 80%, pink 0);
 }
 
 .neubrutalist-progress-bar.aws-dev {
   background: radial-gradient(closest-side, #f7df1e 79%, transparent 80% 100%),
-              conic-gradient(#AA367C 80%, pink 0);
+              conic-gradient(#AA367C 60%, pink 0);
 }
 
 .neubrutalist-progress-bar.azure-dev {
   background: radial-gradient(closest-side, #f7df1e 79%, transparent 80% 100%),
-              conic-gradient(#AA367C 75%, pink 0);
+              conic-gradient(#AA367C 65%, pink 0);
 }
 
 .neubrutalist-progress-bar.google-cloud-dev {
   background: radial-gradient(closest-side, #f7df1e 79%, transparent 80% 100%),
-              conic-gradient(#AA367C 75%, pink 0);
+              conic-gradient(#AA367C 50%, pink 0);
 }
 
 .neubrutalist-progress-bar.github-dev {
   background: radial-gradient(closest-side, #f7df1e 79%, transparent 80% 100%),
-              conic-gradient(#AA367C 95%, pink 0);
+              conic-gradient(#AA367C 100%, pink 0);
 }
 
 .neubrutalist-progress-bar.html-dev {
@@ -399,7 +399,7 @@ nav.navbar {
 
 .neubrutalist-progress-bar.express-dev {
   background: radial-gradient(closest-side, #f7df1e 79%, transparent 80% 100%),
-              conic-gradient(#AA367C 70%, pink 0);
+              conic-gradient(#AA367C 60%, pink 0);
 }
 
 
