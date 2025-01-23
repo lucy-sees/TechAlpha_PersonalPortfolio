@@ -47,7 +47,7 @@ A simple ReactJS portfolio for showcasing skills and projects of a Software Deve
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Live Demo Link](https://tech-alpha-personal-portfolio.vercel.app/)
+[Live Demo Link](https://lucy-zeta.vercel.app/)
 
 ## 📺 Presentation <a name="video-link"></a>
 
