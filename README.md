@@ -1,7 +1,7 @@
 
 # 🚀 Welcome to Lucy's Portfolio!
 
-**[Lucy's Portfolio](https://tech-alpha-personal-portfolio.vercel.app/)** is a showcase of my skills, projects, and creativity as a **Software Developer** and **UI/UX Designer**. Whether you're here to explore my work, collaborate on a project, or just get inspired, this portfolio is designed to highlight my journey and expertise in building modern, responsive, and user-friendly web applications.
+**[Lucy's Portfolio](https://lucy-wanjiru-mwangi.netlify.app/)** is a showcase of my skills, projects, and creativity as a **Software Developer** and **UI/UX Designer**. Whether you're here to explore my work, collaborate on a project, or just get inspired, this portfolio is designed to highlight my journey and expertise in building modern, responsive, and user-friendly web applications.
 
 Powered by **React.js**, **Bootstrap**, and a touch of creativity, this portfolio reflects my passion for clean design, functional interfaces, and innovative solutions. Inspired by the simplicity of modern web development, I aim to make every interaction seamless and enjoyable. 🎉
 
@@ -47,7 +47,7 @@ A simple ReactJS portfolio for showcasing skills and projects of a Software Deve
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Live Demo Link](https://lucy-zeta.vercel.app/)
+[Live Demo Link](https://lucy-wanjiru-mwangi.netlify.app/)
 
 ## 📺 Presentation <a name="video-link"></a>
 
